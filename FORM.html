@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>
+         Form using HTML and CSS
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+         <script src="https://kit.fontawesome.com/1ce8c6e3ee.js" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Include the plugin's CSS and JS: -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" type="text/css"/>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-optionClass').multiselect({
+            
+            optionClass: function(element) {
+                var value = $(element).val();
+ 
+                if (value%2 == 0) {
+                    return 'even';
+                }
+                else {
+                    return 'odd';
+                }
+            }
+        });
+    });
+</script>
+
+       
+    <style>
+ 
+        
+        body {
+            background-color:blue;
+            font-family: Verdana;
+            text-align: center;
+            
+        }
+         #example-optionClass-container .multiselect-container li.odd {
+        background:green;
+        margin-left:20px:
+        margin-right:500px;
+        
+       
+        
+    }
+       form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+       
+       
+ 
+       
+        
+        
+        button {
+            background-color: green;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+             
+            width:100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+           
+        }
+        
+    </style>
+</head>
+  
+<body>
+
+                
+                  
+    <!-- Create Form -->
+    <form id="form">
+    <div class="right-bar" style = "text-align: right;">
+                <i class="fa fa-close"></i>
+                </div>
+    <h2>DATABOX</h2>
+    
+ 
+        <!-- Details -->
+        <div  style="  text-align: left;  margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;" >
+            <label for="Topic" id="label-Topic" >
+               Topic
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="Topic"
+                   placeholder="topic" class="form-control" />
+        </div>
+  
+        <div style="  text-align: left; margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;">
+            <label >
+                Meeting Date
+                
+                
+                
+            </label>
+ 
+            <!-- Input Type Email-->
+            
+            <input type="date" id="meeting" name="birthday" class="form-control">
+        </div>
+        
+        <div style="  text-align: left;  margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;">
+            <label >
+              Start Time
+            </label>
+ 
+            <!-- Input Type Text -->
+            <label for="appt"></label>
+         <input type="time" id="appt" name="appt" class="form-control">
+        </div>
+         <div style="  text-align: left;  margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;">
+            <label >
+              End Time
+            </label>
+ 
+            <!-- Input Type Text -->
+            
+                   <label for="appt"></label>
+                   <input type="time" id="appt" name="appt" class="form-control">
+        </div>
+  
+        <div style="  text-align: left;  margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;">
+            <label >
+               Online/Offline
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="role" class="form-control">
+                <option value="select">select</option>
+               
+                 <option value="Online">Online</option>
+                <option value=" Offline">Offline</option>
+                
+            </select>
+            </div>
+           
+  
+   <div style="  text-align: left; margin-left:20px  margin-bottom:20px;  font-family:inherit; padding:10px;  display:block; width:100%;">
+            <label>
+               Members
+            </label>         
+ 
+    <select id="example-optionClass"  multiple="multiple"  class="form-control"  >
+        <option value="1">PArul Singh</option>
+        <option value="2">Neha Sharma</option>
+        <option value="3">Jyoti Joshi</option>
+        <option value="4">Shivangi Mehta</option>
+        <option value="5">Vaishaili Bisht</option>
+        <option value="6">Shivani Pal</option>
+    </select>
+</div>
+
+        
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+    
+</body>
+  
+</html>
